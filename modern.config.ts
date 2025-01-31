@@ -10,7 +10,7 @@ export default defineConfig({
     //     assetPrefix:
     //         process.env.NODE_ENV === 'production'
     //             ? 'https://payer-portal-mdrn.netlify.app/'
-    //             : 'http://localhost:3002/',
+    //             : 'http://localhost:8080/',
     // },
     plugins: [
         appTools({
