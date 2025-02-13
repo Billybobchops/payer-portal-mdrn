@@ -82,13 +82,15 @@ export default function Layout() {
     // const sidebarContent = null;
 
     return (
-        <div className="layout">
+        <>
             <Header homeLink={'/home'} logoAltText="Invoice Cloud logo" logoSrc={logo} navLinks={navLinks} />
-            <div className="content">
-                <Outlet />
-                {sidebarContent && <Sidebar>{sidebarContent}</Sidebar>}
+            <div className="layout">
+                <div className="content">
+                    <Outlet />
+                    {sidebarContent && <Sidebar>{sidebarContent}</Sidebar>}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }

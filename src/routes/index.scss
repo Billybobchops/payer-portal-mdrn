@@ -19,12 +19,13 @@
 .layout {
     display: grid;
     grid-template-rows: auto 1fr;
-    width: 1250px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
 .content {
     grid-template-columns: 1fr; // Default to one column
+    min-height: 500px; // may be able to remove this later?
 }
 
 .main-content {
@@ -34,4 +35,8 @@
 
 .content:has(#sidebar) {
     grid-template-columns: 2fr 1fr;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
 }
