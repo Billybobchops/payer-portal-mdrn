@@ -30,7 +30,7 @@ export default function Layout() {
 
     return (
         <>
-            <Header homeLink={'/home'} logoAltText="Invoice Cloud logo" logoSrc={logo} navLinks={dummyData.navLinks} />
+            <Header homeLink={'/'} logoAltText="Invoice Cloud logo" logoSrc={logo} navLinks={dummyData.navLinks} />
             <div className="layout">
                 <div className="content">
                     <Outlet />

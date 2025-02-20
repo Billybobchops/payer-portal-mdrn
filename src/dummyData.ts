@@ -30,6 +30,7 @@ export const dummyData = {
             label: 'Support',
             href: '/support',
             subMenu: [
+                { label: 'Contact Us', href: '/support/contactus' },
                 {
                     label: 'Help - User Videos',
                     href: '/support/uservideos',
