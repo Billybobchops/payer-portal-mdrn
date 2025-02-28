@@ -1,3 +1,4 @@
+import { NavLink } from '@modern-js/runtime/router';
 import Badge from 'remoteDesignSystem/Badge';
 import { AutoPay, ChevronLarge, Paperless, PayByText } from 'remoteDesignSystem/Icon';
 import classes from './FeatureStatus.module.scss';
@@ -27,7 +28,7 @@ interface EnrollmentGridRowProps {
 
 const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({ serviceType, link, status }) => {
     return (
-        <a href={link} className={classes.gridRow}>
+        <NavLink to={link} className={classes.gridRow}>
             <div className={classes.gridItems}>
                 <div className={classes.gridItem}>
                     {serviceType === 'AutoPay' && <AutoPay fill={'var(--theme-a-4)'} />}
@@ -42,7 +43,7 @@ const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({ serviceType, link
             <div className={classes.chevron}>
                 <ChevronLarge fill={'var(--utility-neutral-80)'} />
             </div>
-        </a>
+        </NavLink>
     );
 };
 

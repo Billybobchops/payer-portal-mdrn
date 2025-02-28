@@ -7,6 +7,10 @@ export default createModuleFederationConfig({
             process.env.NODE_ENV === 'production'
                 ? 'remoteDesignSystem@https://starling-ui-design-system.netlify.app/mf-manifest.json'
                 : 'remoteDesignSystem@http://localhost:3001/mf-manifest.json',
+        // payByText:
+        // 	process.env.NODE_ENV === 'production'
+        // 		? 'payByText@https://payby-text.netlify.app/mf-manifest.json'
+        // 		: 'payByText@http://localhost:3003/mf-manifest.json',
     },
     shared: {
         react: { singleton: true },
