@@ -5,8 +5,8 @@ export default createModuleFederationConfig({
     remotes: {
         remoteDesignSystem:
             process.env.NODE_ENV === 'production'
-                ? 'remoteDesignSystem@https://starling-ui-design-system.netlify.app/static/mf-manifest.json'
-                : 'remoteDesignSystem@http://localhost:3001/static/mf-manifest.json',
+                ? 'remoteDesignSystem@https://starling-ui-design-system.netlify.app/static/remoteEntry.js'
+                : 'remoteDesignSystem@http://localhost:3001/static/remoteEntry.js',
         // payByText:
         // 	process.env.NODE_ENV === 'production'
         // 		? 'payByText@https://payby-text.netlify.app/mf-manifest.json'
