@@ -3,7 +3,6 @@ import Divider from 'remoteDesignSystem/Divider';
 // import 'remoteDesignSystem/DesignSystemRootStyles';
 // import './index.scss';
 import Heading from 'remoteDesignSystem/Heading';
-
 const Index = () => (
     <>
         <Helmet title="Pay by Text" />
