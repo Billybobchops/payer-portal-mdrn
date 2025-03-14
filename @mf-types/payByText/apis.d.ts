@@ -1,3 +1,3 @@
 
-    export type RemoteKeys = 'payByText/PayByTextPage';
-    type PackageType<T> = T extends 'payByText/PayByTextPage' ? typeof import('payByText/PayByTextPage') :any;
+    export type RemoteKeys = 'payByText/PayByText';
+    type PackageType<T> = T extends 'payByText/PayByText' ? typeof import('payByText/PayByText') :any;
