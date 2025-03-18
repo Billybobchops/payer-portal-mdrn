@@ -1,5 +1,7 @@
+import type { Spacing } from '@styles/spacing';
 interface CheckboxesProps {
     legend: string;
+    spacing?: Spacing | Spacing[];
     options: {
         text: string;
         id: string;

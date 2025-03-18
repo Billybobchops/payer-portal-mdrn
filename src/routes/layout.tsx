@@ -14,7 +14,7 @@ export default function Layout() {
     // We may want to look at generating the content in the component file somehow while still conditionally rendering it here
     const sidebarContent = (
         <>
-            <Heading level="h3">Need Help?</Heading>
+            <Heading semanticLevel="h3">Need Help?</Heading>
             <Paragraph>
                 You may reach us at <InlineLink href="tel:1-800-555-1234">(800) 555-1234.</InlineLink>
             </Paragraph>

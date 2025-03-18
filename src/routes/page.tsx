@@ -10,7 +10,7 @@ const Index = () => {
         <>
             <Helmet title="Account Overview" />
             <main className="main-content">
-                <Heading level="h1">Your Account At A Glance</Heading>
+                <Heading semanticLevel="h1">Your Account At A Glance</Heading>
                 <Divider isDark={true} />
                 <FeatureStatus
                     autoPayStatus="Not Enrolled"

@@ -1,3 +1,4 @@
+import type { Spacing } from '@styles/spacing';
 import type React from 'react';
 interface MultiSelectOption {
     value: string;
@@ -12,6 +13,7 @@ interface MultiSelectProps {
     placeholder?: string;
     required?: boolean;
     selectedValues: string[];
+    spacing?: Spacing | Spacing[];
 }
 declare const MultiSelect: React.FC<MultiSelectProps>;
 export default MultiSelect;

@@ -8,7 +8,7 @@ const Index = () => (
     <>
         <Helmet title="Contact Us" />
         <main className="main-content">
-            <Heading level="h1">Contact Us</Heading>
+            <Heading semanticLevel="h1">Contact Us</Heading>
             <Divider isDark={true} />
         </main>
     </>
