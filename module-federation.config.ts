@@ -17,5 +17,6 @@ export default createModuleFederationConfig({
         'react-dom': { singleton: true, requiredVersion: '18.3.1' },
         'react-router-dom': { singleton: true, requiredVersion: '18.3.1' },
         clsx: { singleton: true, requiredVersion: '2.1.1' },
+        'react-hook-form': { singleton: true, requiredVersion: '7.54.2' },
     },
 });
