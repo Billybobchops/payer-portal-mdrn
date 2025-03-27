@@ -1,12 +1,11 @@
 import type { Spacing } from '@styles/spacing';
-interface InputProps {
+interface PhoneInputProps {
     disabled?: boolean;
     helperText?: string;
     label: string;
     name: string;
-    required: boolean;
+    required?: boolean;
     spacing?: Spacing | Spacing[];
-    type: 'text' | 'number';
 }
-declare const Input: React.FC<InputProps>;
-export default Input;
+declare const PhoneInput: React.FC<PhoneInputProps>;
+export default PhoneInput;
