@@ -1,3 +1,4 @@
+import './index.scss';
 import logo from '@/assets/example-logo.png';
 import { dummyData } from '@/dummyData';
 import Footer from '@components/Footer';
