@@ -14,9 +14,9 @@ const Index = () => {
                 <Divider isDark={true} />
                 <FeatureStatus
                     autoPayStatus="Not Enrolled"
-                    autoPayLink="#"
+                    autoPayLink="/profile/autopay"
                     paperlessStatus="Partially Enrolled"
-                    paperlessLink="#"
+                    paperlessLink="/profile/paperless"
                     payByTextStatus="Enrolled"
                     payByTextLink="/profile/paybytext"
                 />
