@@ -10,8 +10,6 @@ import Paragraph from 'remoteDesignSystem/Paragraph';
 
 const Index = () => {
     const [showAlert, setShowAlert] = useState(false);
-    const alertContent =
-        'You may choose to pay a fixed payment amount or have our system automatically change the payment amount to the Balance Due of the invoice. You may also choose when you would like this payment to occur. You can choose to have it paid on a specific day every month, or on the date your invoice is due. Payment is first applied to the oldest outstanding invoice. Paying in full will pay all outstanding invoices.';
 
     return (
         <>
@@ -37,12 +35,13 @@ const Index = () => {
                     Click to learn more about this feature.
                 </InlineLink>
                 {showAlert && (
-                    <Alert
-                        content={alertContent}
-                        isDismissable={false}
-                        spacing={['u-mt-s', 'u-mb-l']}
-                        variant="default"
-                    />
+                    <Alert isDismissable={false} spacing={['u-mt-s', 'u-mb-l']} variant="default">
+                        You may choose to pay a fixed payment amount or have our system automatically change the payment
+                        amount to the Balance Due of the invoice. You may also choose when you would like this payment
+                        to occur. You can choose to have it paid on a specific day every month, or on the date your
+                        invoice is due. Payment is first applied to the oldest outstanding invoice. Paying in full will
+                        pay all outstanding invoices.
+                    </Alert>
                 )}
                 {/* Table to go here */}
             </main>

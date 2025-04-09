@@ -9,8 +9,6 @@ import InlineLink from 'remoteDesignSystem/InlineLink';
 
 const Index = () => {
     const [showAlert, setShowAlert] = useState(false);
-    const alertContent =
-        'Email addresses are located on the Update My User information page. Pay by Text notifications are located on the Pay by Text menu.';
 
     return (
         <>
@@ -24,12 +22,10 @@ const Index = () => {
                 </InlineLink>
 
                 {showAlert && (
-                    <Alert
-                        content={alertContent}
-                        isDismissable={false}
-                        spacing={['u-mt-s', 'u-mb-l']}
-                        variant="default"
-                    />
+                    <Alert isDismissable={false} spacing={['u-mt-s', 'u-mb-l']} variant="default">
+                        Email addresses are located on the Update My User information page. Pay by Text notifications
+                        are located on the Pay by Text menu.
+                    </Alert>
                 )}
 
                 {/* 2 column grid of content to go here */}

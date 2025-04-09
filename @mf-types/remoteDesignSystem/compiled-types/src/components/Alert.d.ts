@@ -1,6 +1,6 @@
 import type { Spacing } from '@styles/spacing';
 interface AlertProps {
-    content: string;
+    children?: React.ReactNode;
     isDismissable: boolean;
     spacing?: Spacing | Spacing[];
     variant: 'default' | 'warning' | 'error' | 'success';

@@ -10,8 +10,6 @@ import Paragraph from 'remoteDesignSystem/Paragraph';
 
 const Index = () => {
     const [showAlert, setShowAlert] = useState(false);
-    const alertContent =
-        'When you give permission to Users to access your Accounts, you can restrict certain actions on the account by selecting one of the following access levels: Account Guest - This access level will prevent the User from making AutoPay and Paperless elections on the selected Account. Account Oversight - This access level will allow the User to make AutoPay and Paperless elections.';
 
     return (
         <>
@@ -25,12 +23,13 @@ const Index = () => {
                 </InlineLink>
 
                 {showAlert && (
-                    <Alert
-                        content={alertContent}
-                        isDismissable={false}
-                        spacing={['u-mt-s', 'u-mb-l']}
-                        variant="default"
-                    />
+                    <Alert isDismissable={false} spacing={['u-mt-s', 'u-mb-l']} variant="default">
+                        When you give permission to Users to access your Accounts, you can restrict certain actions on
+                        the account by selecting one of the following access levels: Account Guest - This access level
+                        will prevent the User from making AutoPay and Paperless elections on the selected Account.
+                        Account Oversight - This access level will allow the User to make AutoPay and Paperless
+                        elections.
+                    </Alert>
                 )}
 
                 <Heading semanticLevel="h2" classLevel="h3" spacing="u-mt-l">
