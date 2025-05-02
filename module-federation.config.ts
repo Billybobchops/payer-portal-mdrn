@@ -4,8 +4,9 @@ export default createModuleFederationConfig({
     name: 'payer-portal',
     runtimePlugins: ['./src/runtime/dynamic-remotes-plugin'],
     remotes: {
-        remoteDesignSystem: 'remoteDesignSystem@http://localhost:3001--INVALID--/static/remoteEntry.js',
-        payByText: 'payByText@http://localhost:3003X/static/remoteEntry.js',
+        remoteDesignSystem:
+            'remoteDesignSystem@http://localhost:3001--INVALID-TO-SHOW-RUNTIME-PLUGIN-WORKS--/static/remoteEntry.js',
+        payByText: 'payByText@http://localhost:3003--INVALID-TO-SHOW-RUNTIME-PLUGIN-WORKS--/static/remoteEntry.js',
     },
     shared: {
         react: { singleton: true, requiredVersion: '18.3.1' },

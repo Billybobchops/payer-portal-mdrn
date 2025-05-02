@@ -28,22 +28,16 @@ const DynamicRemotesPlugin: FederationRuntimePlugin = () => {
         init: async (args: { options: { remotes?: Record<string, { entry?: string }> } }) => {
             const config = window.invoiceCloud?.configuration || {};
 
-            // Handle both object and array formats for remotes
-            if (args.options.remotes) {
-                const remoteEntries = Array.isArray(args.options.remotes)
-                    ? args.options.remotes
-                    : Object.entries(args.options.remotes);
-
-                for (const remoteEntry of remoteEntries) {
-                    const remoteName = Array.isArray(remoteEntry) ? remoteEntry[0] : remoteEntry.name;
-                    const remoteConfig = Array.isArray(remoteEntry) ? remoteEntry[1] : remoteEntry;
+            if (args.options.remotes && Array.isArray(args.options.remotes)) {
+                for (const remoteEntry of args.options.remotes) {
+                    const remoteName = remoteEntry.name;
                     const configKey = remoteToConfigMap[remoteName];
                     const remoteUrl = configKey && config[configKey];
 
                     if (remoteUrl) {
-                        const remote = remoteConfig as { entry?: string };
-                        const originalUrl = remote.entry;
-                        remote.entry = remoteUrl;
+                        const originalUrl = remoteEntry.entry;
+                        remoteEntry.entry = remoteUrl;
+
                         console.log(`[DynamicRemotesPlugin] Replaced ${remoteName} URL: ${originalUrl} → ${remoteUrl}`);
                     } else {
                         console.warn(`[DynamicRemotesPlugin] No config found for remote "${remoteName}"`);
@@ -55,8 +49,5 @@ const DynamicRemotesPlugin: FederationRuntimePlugin = () => {
         },
     };
 };
-
-// Add console log to confirm the plugin is loaded
-console.log('[DynamicRemotesPlugin] Plugin module loaded');
 
 export default DynamicRemotesPlugin;
