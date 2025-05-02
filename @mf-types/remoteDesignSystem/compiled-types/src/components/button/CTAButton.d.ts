@@ -8,7 +8,7 @@ interface ButtonProps {
     spacing?: Spacing | Spacing[];
     text: string;
     type?: 'button' | 'submit';
-    variant?: 'blue' | 'green';
+    variant?: 'blue' | 'green' | 'outline';
 }
 declare const CTAButton: React.FC<ButtonProps>;
 export default CTAButton;
