@@ -27,11 +27,8 @@
         window.location.hostname.includes('starling') && !window.location.hostname.includes('localhost');
     const config = isProduction ? prodConfig : devConfig;
 
-    // Final check to fallback to default values if production URLs are placeholders
     window.invoiceCloud.configuration = {
-        REMOTE_DESIGN_SYSTEM_URL: config.REMOTE_DESIGN_SYSTEM_URL.includes('{{')
-            ? devConfig.REMOTE_DESIGN_SYSTEM_URL
-            : config.REMOTE_DESIGN_SYSTEM_URL,
-        PAY_BY_TEXT_URL: config.PAY_BY_TEXT_URL.includes('{{') ? devConfig.PAY_BY_TEXT_URL : config.PAY_BY_TEXT_URL,
+        REMOTE_DESIGN_SYSTEM_URL: config.REMOTE_DESIGN_SYSTEM_URL,
+        PAY_BY_TEXT_URL: config.PAY_BY_TEXT_URL,
     };
 })(window);
