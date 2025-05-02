@@ -24,7 +24,7 @@
 
     // More sophisticated detection will be added
     const isProduction =
-        window.location.hostname.includes('starling') && !window.location.hostname.includes('localhost');
+        window.location.hostname.includes('netlify') && !window.location.hostname.includes('localhost');
     const config = isProduction ? prodConfig : devConfig;
 
     window.invoiceCloud.configuration = {
