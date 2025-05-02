@@ -2,10 +2,10 @@ import { createModuleFederationConfig } from '@module-federation/modern-js';
 
 export default createModuleFederationConfig({
     name: 'payer-portal',
+    runtimePlugins: ['./src/runtime/dynamic-remotes-plugin'],
     remotes: {
-        // commenting these out to test the plugin breaks everything... "modules not found"
-        remoteDesignSystem: 'remoteDesignSystem@http://localhost:3001/static/remoteEntry.js',
-        payByText: 'payByText@http://localhost:3003/static/remoteEntry.js',
+        remoteDesignSystem: 'remoteDesignSystem@http://localhost:3001--INVALID--/static/remoteEntry.js',
+        payByText: 'payByText@http://localhost:3003X/static/remoteEntry.js',
     },
     shared: {
         react: { singleton: true, requiredVersion: '18.3.1' },
@@ -15,12 +15,3 @@ export default createModuleFederationConfig({
         'react-hook-form': { singleton: true, requiredVersion: '7.54.2' },
     },
 });
-
-// remoteDesignSystem:
-//     process.env.NODE_ENV === 'production'
-//         ? 'remoteDesignSystem@https://starling-ui-design-system.netlify.app/static/remoteEntry.js'
-//         : 'remoteDesignSystem@http://localhost:3001/static/remoteEntry.js',
-// payByText:
-//     process.env.NODE_ENV === 'production'
-//         ? 'payByText@https://pay-by-text.netlify.app/static/remoteEntry.js'
-//         : 'payByText@http://localhost:3003/static/remoteEntry.js',

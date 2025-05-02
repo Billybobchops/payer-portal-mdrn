@@ -1,19 +1,16 @@
 import { appTools, defineConfig } from '@modern-js/app-tools';
 import { moduleFederationPlugin } from '@module-federation/modern-js';
-import DynamicRemotesPlugin from './src/runtime/dynamic-remotes-plugin';
 
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig({
     runtime: {
         router: true,
-        // plugins: [DynamicRemotesPlugin()],
     },
     plugins: [
         appTools({
             bundler: 'rspack',
         }),
         moduleFederationPlugin(),
-        // DynamicRemotesPlugin(),
     ],
     output: {
         copy: [

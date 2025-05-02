@@ -50,3 +50,14 @@
     document.dispatchEvent(configReadyEvent);
     console.log('[env-config] Configuration ready event dispatched');
 })(window);
+
+// save temporarily
+
+// remoteDesignSystem:
+//     process.env.NODE_ENV === 'production'
+//         ? 'remoteDesignSystem@https://starling-ui-design-system.netlify.app/static/remoteEntry.js'
+//         : 'remoteDesignSystem@http://localhost:3001/static/remoteEntry.js',
+// payByText:
+//     process.env.NODE_ENV === 'production'
+//         ? 'payByText@https://pay-by-text.netlify.app/static/remoteEntry.js'
+//         : 'payByText@http://localhost:3003/static/remoteEntry.js',
