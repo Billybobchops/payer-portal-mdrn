@@ -13,7 +13,7 @@ import SecondaryButton from 'remoteDesignSystem/SecondaryButton';
 
 export default function Layout() {
     const navLinks = [
-        { label: 'Home', href: '/', icon: <Home fill="var(--nav-link-color)" />, iconOnly: true },
+        { label: 'Home', href: '/', icon: <Home fill="var(--nav-link-color)" />, mobileOnlyText: true },
         {
             label: 'My Account',
             subMenu: [
