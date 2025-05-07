@@ -29,4 +29,5 @@ export declare const FirstPage: React.FC<IconProps>;
 export declare const LastPage: React.FC<IconProps>;
 export declare const PreviousPage: React.FC<IconProps>;
 export declare const NextPage: React.FC<IconProps>;
+export declare const Home: React.FC<IconProps>;
 export {};
