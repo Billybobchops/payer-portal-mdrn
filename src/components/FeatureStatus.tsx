@@ -1,6 +1,6 @@
 import { NavLink } from '@modern-js/runtime/router';
 import Badge from 'remoteDesignSystem/Badge';
-import { AutoPay, ChevronLarge, Paperless, PayByText } from 'remoteDesignSystem/Icon';
+import { AutoPay, ChevronRight, Paperless, PayByText } from 'remoteDesignSystem/Icon';
 import classes from './FeatureStatus.module.scss';
 
 type EnrollmentStatus = 'Not Enrolled' | 'Partially Enrolled' | 'Enrolled';
@@ -40,9 +40,7 @@ const EnrollmentGridRow: React.FC<EnrollmentGridRowProps> = ({ serviceType, link
                     <Badge content={status} hasMargin={false} variant={getBadgeVariant(status)} />
                 </span>
             </div>
-            <div className={classes.chevron}>
-                <ChevronLarge fill={'var(--utility-neutral-80)'} />
-            </div>
+            <ChevronRight fill={'var(--theme-a-4)'} />
         </NavLink>
     );
 };

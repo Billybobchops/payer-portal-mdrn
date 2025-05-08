@@ -5,7 +5,7 @@ export declare const ICFooterLogo: React.FC<IconProps>;
 export declare const AutoPay: React.FC<IconProps>;
 export declare const Paperless: React.FC<IconProps>;
 export declare const PayByText: React.FC<IconProps>;
-export declare const ChevronLarge: React.FC<IconProps>;
+export declare const ChevronRight: React.FC<IconProps>;
 export declare const Minus: React.FC<IconProps>;
 export declare const Plus: React.FC<IconProps>;
 export declare const Info: React.FC<IconProps>;
