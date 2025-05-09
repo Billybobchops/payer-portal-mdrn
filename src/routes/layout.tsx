@@ -1,11 +1,14 @@
 import 'remoteDesignSystem/DesignSystemRootStyles';
 import './index.scss';
 import logo from '@/assets/example-logo.png';
-import Footer from '@components/Footer';
+import trustwave from '@/assets/trustwave.png';
 import Sidebar from '@components/Sidebar';
 import { Outlet } from '@modern-js/runtime/router';
+import Footer from 'remoteDesignSystem/Footer';
+import type { Link } from 'remoteDesignSystem/Footer';
 import Header from 'remoteDesignSystem/Header';
 import Heading from 'remoteDesignSystem/Heading';
+import { ICFooterLogo } from 'remoteDesignSystem/Icon';
 import { Home } from 'remoteDesignSystem/Icon';
 import InlineLink from 'remoteDesignSystem/InlineLink';
 import Paragraph from 'remoteDesignSystem/Paragraph';
@@ -67,6 +70,26 @@ export default function Layout() {
         { label: 'Sign Out', href: '/signout' },
     ];
 
+    const dummyFooterData: Link[] = [
+        {
+            label: 'Privacy Policy',
+            href: 'https://www.invoicecloud.net/privacy-policy',
+            variant: 'grey',
+        },
+        {
+            label: 'Accessibility',
+            href: 'https://invoicecloud.net/accessibility-statement',
+            variant: 'grey',
+        },
+        {
+            label: 'Secure Site',
+            href: 'https://sealserver.trustwave.com/cert.php?customerId=e6fe5831b6ba46ef83d7c7330126e94d',
+            variant: 'grey',
+            imageSrc: trustwave,
+            imageAlt: "This site protected by Trustwave's Trust Commerce Program. You may click on seal to validate.",
+        },
+    ];
+
     // To Do: I believe this is custom CRM content... we may need to build a utility function to convert it to our components
     // We may want to look at generating the content in the component file somehow while still conditionally rendering it here
     const sidebarContent = (
@@ -93,7 +116,7 @@ export default function Layout() {
                     <Outlet />
                     {sidebarContent && <Sidebar>{sidebarContent}</Sidebar>}
                 </div>
-                <Footer />
+                <Footer logo={<ICFooterLogo />} links={dummyFooterData} />
             </div>
         </>
     );

@@ -1,5 +1,5 @@
 type EnrollmentStatus = 'Not Enrolled' | 'Partially Enrolled' | 'Enrolled';
-interface EnrollStatusProps {
+interface FeatureStatusProps {
     autoPayStatus: EnrollmentStatus;
     paperlessStatus: EnrollmentStatus;
     payByTextStatus: EnrollmentStatus;
@@ -7,5 +7,5 @@ interface EnrollStatusProps {
     paperlessLink: string;
     payByTextLink: string;
 }
-declare const EnrollStatus: React.FC<EnrollStatusProps>;
-export default EnrollStatus;
+declare const FeatureStatus: React.FC<FeatureStatusProps>;
+export default FeatureStatus;
